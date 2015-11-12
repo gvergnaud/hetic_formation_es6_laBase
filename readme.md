@@ -51,9 +51,9 @@ peut maintenant s'écrire
 ```js
 collection.map((item) => item + 1);
 ```
-Si on ne défini notre function de callback n'est pas définie par un block
+Si notre function de callback n'est pas définie par un block
 (comme au dessus), la valeur est automatiquement retournée. Si on défini un
-block, on peut exécuter plusieurs instructions et on doit on retourne avec le
+block, on peut exécuter plusieurs instructions et on doit utiliser le
 token `return`, comme avant. par exemple :
 
 ```js
@@ -64,7 +64,7 @@ collection.map((item, i) => {
 ```
 
 #### Les petites différences entre les deux
-Une arrow function n'est pas liée à un contexte, comme une function standard. Elle n'a donc pas d'objet `this` qui le définie. C'est cool, parce que c'était quand même assez emmerdant qu'un contexte soit créé pour un callback par exemple. On se retrouvait à devoir le gerer manuellement.
+Une arrow function n'est pas liée à un contexte, comme une function standard. Elle n'a donc pas d'objet `this`. C'est cool, parce que c'était quand même assez emmerdant qu'un contexte soit créé pour un callback par exemple. On a donc plus besoin de le gérer manuellement.
 ```js
 (function() {
   this.coucou = 'blablabla';
@@ -83,7 +83,7 @@ Une arrow function n'est pas liée à un contexte, comme une function standard. 
 ```
 
 ## Default values
-On peut maintenant définir des valeurs par défault dans les paramètres d'une function, ce qui existait déjà dans pleins de languages :
+On peut maintenant définir des valeurs par défault dans les paramètres d'une function.
 
 ```js
 function renderList(items = []) {
@@ -181,11 +181,8 @@ let myFunc = (...args) => {
 
 myFunc('lol', ':)');
 ```
-On a alors accès à un vrai tableau, pas comme avec le token `arguments`, qui ne
-permettait pas d'utiliser les méthodes des tableaux directement dessus (comme
-map, forEach, filter, reduce ...).
 
-on peut aussi récupérer le reste des arguments avec cette syntaxe :
+On peut récupérer le reste des arguments comme ceci :
 
 ```js
 let myFunc = (arg1, ...rest) => {
@@ -195,7 +192,7 @@ let myFunc = (arg1, ...rest) => {
 myFunc('lol', ':)', '😜');
 ```
 
-ou injecter un tableau d'arguments dans une function :
+Ou bien injecter un tableau d'arguments dans une function :
 
 ```js
 let myFunc = (arg1, arg2, arg3) => {
