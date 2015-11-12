@@ -171,7 +171,7 @@ const spreadObj = {...obj1, ...obj2};
 console.log(spreadObj); // {one: 1, two: 2, three: 'three', four: 4, five: 5};
 ```
 #### c'est pas tout
-on peut aussi récupérer les arguments d'une function grâce à la spread syntax :
+On peut aussi récupérer les arguments d'une function grâce à la spread syntax :
 
 ```js
 let myFunc = (...args) => {
@@ -209,6 +209,71 @@ myFunc('lol', ...[':)', '😜'], 'blablebli'); // === myFunc('lol', ':)', '😜'
 ## import & export
 
 ## Les class
+
+Une interface pour pouvoir faire de l'éhéritage prototypal plus facilement.
+#### Ce qu'on faisait avant :
+```js
+// ES5
+function Animal(name) {
+  this.name = name || 'no name'
+}
+
+Animal.prototype.setName = function(name) {
+  return this.name = name + '!'
+}
+
+Animal.prototype.getName = function(name) {
+  return this.name
+}
+
+function Dog() {}
+
+Dog.prototype = Object.create(Animal.prototype, {
+  speak: function() {
+    console.log('woof')
+  }
+})
+
+var dog = new Dog('hubert')
+
+dog.getName() // 'hubert'
+dog.setName('Oo') // 'Oo!'
+dog.speak() // 'woof'
+```
+
+#### La même chose aujourd'hui :
+```js
+// ES6
+class Animal {
+  constructor(name = 'no name') {
+    this.name = name
+  }
+
+  set name(name) {
+    return this.name = `${name}!`
+  }
+
+  get name() {
+    return this.name
+  }
+}
+
+class Dog extends Animal {
+  constructor(name) {
+    super(name)
+  }
+
+  speak() {
+    console.log('woof');
+  }
+}
+
+const dog = new Dog('hubert')
+
+dog.name // 'hubert'. pas besoin d'exécuter un getter
+dog.name = 'Oo' //  'Oo!'. pas besoin d'exécuter un setter
+dog.speak() // 'woof'
+```
 
 
 ## Ressources :
