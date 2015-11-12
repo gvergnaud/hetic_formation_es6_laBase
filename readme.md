@@ -6,8 +6,8 @@ Toutes les features ES6 (ou ES2015) ne sont pas encore bien supportée à ce jou
 Il faut donc utiliser un compiler, comme Babel.
 
 ```
-git clone // TODO: ajouter le repo
-cd // repo
+git clone https://github.com/gvergnaud/hetic_es6_laBase.git
+cd hetic_es6_laBase
 npm install babel-cli -g
 npm install
 babel-node index.js
