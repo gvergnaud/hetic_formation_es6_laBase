@@ -273,7 +273,7 @@ import { app, lolHelper } from './app';
 
 ## Les class
 
-Une interface pour pouvoir faire de l'éhéritage prototypal plus facilement.
+Une interface pour pouvoir faire de l'héritage prototypal plus facilement.
 #### Ce qu'on faisait avant :
 ```js
 // ES5
