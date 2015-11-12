@@ -208,6 +208,69 @@ myFunc('lol', ...[':)', '😜'], 'blablebli'); // === myFunc('lol', ':)', '😜'
 
 ## import & export
 
+La killer-feature de l'es6.
+
+Tous les imports doivent se trouver au début du fichier.
+```js
+// index.js
+import app from './app';
+
+app.init();
+
+// app.js
+const app = {
+  init() {
+    // do Somthing
+  }
+};
+
+export default app;
+```
+
+On peut exporter plusieurs element d'un même fichier :
+```js
+// app.js
+
+const app = {
+  init() {
+    // do Somthing
+  }
+};
+
+let lolHelper = (text) => {
+  console.log(`lol, ${text}`);
+};
+
+export lolHelper;
+export default app;
+
+// index.js
+import app, { lolHelper } from './app';
+
+lolHelper('la vie est cool'); // 'lol, la vie est cool'
+app.init();
+```
+
+Le token `default` précise ce qui est exporté par défaut par le fichier. Il n'est
+pas obligatoire ; on peut très bien ne rien exporter par défaut :
+
+```js
+// app.js
+export const app = {
+  init() {
+    // do Somthing
+  }
+};
+
+export let lolHelper = (text) => {
+  console.log(`lol, ${text}`);
+};
+
+// index.js
+import { app, lolHelper } from './app';
+// ...
+```
+
 ## Les class
 
 Une interface pour pouvoir faire de l'éhéritage prototypal plus facilement.
