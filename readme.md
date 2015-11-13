@@ -239,7 +239,7 @@ const app = {
 export default app;
 ```
 
-On peut exporter plusieurs element d'un même fichier :
+On peut exporter plusieurs elements d'un même fichier :
 ```js
 // app.js
 
