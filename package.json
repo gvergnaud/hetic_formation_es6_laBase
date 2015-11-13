@@ -1,14 +1,22 @@
 {
   "name": "y",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Comment exécuter du code ES6 ?",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gvergnaud/hetic_es6_laBase.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gvergnaud/hetic_es6_laBase/issues"
+  },
+  "homepage": "https://github.com/gvergnaud/hetic_es6_laBase#readme",
   "dependencies": {
-    "babel": "^6.1.5"
+    "babel": "^5.8.34"
   }
 }

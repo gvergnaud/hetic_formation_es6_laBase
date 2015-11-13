@@ -8,8 +8,8 @@ Il faut donc utiliser un compiler, comme Babel.
 ```
 git clone https://github.com/gvergnaud/hetic_es6_laBase.git
 cd hetic_es6_laBase
-npm install babel-cli -g
-npm install
+npm install -g babel@5.8.34
+source ~/.bashrc
 babel-node index.js
 ```
 
