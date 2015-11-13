@@ -133,16 +133,16 @@ console.log(firstname); // 'Moustache'
 console.log(lastname); // 'Devbaques'
 ```
 #### Pourquoi c'est de la balle ?
-On peut les utiliser le destructuring pour récupérer les paramètres d'une function :
+On peut utiliser le destructuring pour récupérer les paramètres d'une function :
 
 ```js
 let fullname = ({firstname, lastname}) => `${firstname} ${lastname}`
 
 fullname(person); // 'Moustache Devbaques'
 ```
-C'est chouette parce que ça rend le passage de paramètre expressif, tout en permettant de ne pas se prendre la tête avec l'ordre des paramètre, puisqu'on les stock sous forme d'object.
+C'est chouette parce que ça rend le passage de paramètre expressif, tout en permettant de ne pas se prendre la tête avec l'ordre des paramètres, puisqu'on les stock sous la forme d'un object.
 
-Notez à quel points ça se mari bien avec l'Object Shortcut :
+Notez à quel point ça se mari bien avec l'Object Shortcut :
 ```js
 let myFunction({param1, param2, param3}) => { // destructuring
   // do something
