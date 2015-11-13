@@ -53,7 +53,7 @@ J.C. Beaux
 Une nouvelle manière de définir ses functions.
 
 ```js
-collection.forEach(function(item) {
+collection.map(function(item) {
   return item + 1;
 });
 ```
