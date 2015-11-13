@@ -35,6 +35,18 @@ On peut maintenant interpoller des variables à l'intérieur d'une string en la 
 const person = 'Moray';
 const salutation = `Wesh ${person}`; // Wesh Moray
 ```
+Les back-ticks permettent aussi de définir une string sur plusieurs lignes :
+```js
+const mailBody = `
+Bonjour,
+
+bla ble bli...
+
+Bien à vous,
+
+J.C. Beaux
+`
+```
 
 ## arrow-function
 
