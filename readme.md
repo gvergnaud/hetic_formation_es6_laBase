@@ -294,26 +294,26 @@ function Animal(name) {
 }
 
 Animal.prototype.setName = function(name) {
-  return this.name = name + '!'
-}
+  return this.name = name + '!';
+};
 
 Animal.prototype.getName = function(name) {
-  return this.name
-}
+  return this.name;
+};
 
 function Dog() {}
 
 Dog.prototype = Object.create(Animal.prototype, {
   speak: function() {
-    console.log('woof')
+    console.log('woof');
   }
-})
+});
 
-var dog = new Dog('hubert')
+var dog = new Dog('hubert');
 
-dog.getName() // 'hubert'
-dog.setName('Oo') // 'Oo!'
-dog.speak() // 'woof'
+dog.getName(); // 'hubert'
+dog.setName('Oo'); // 'Oo!'
+dog.speak(); // 'woof'
 ```
 
 #### La même chose aujourd'hui :
@@ -321,21 +321,21 @@ dog.speak() // 'woof'
 // ES6
 class Animal {
   constructor(name = 'no name') {
-    this.name = name
+    this.name = name;
   }
 
   set name(name) {
-    return this.name = `${name}!`
+    return this.name = `${name}!`;
   }
 
   get name() {
-    return this.name
+    return this.name;
   }
 }
 
 class Dog extends Animal {
   constructor(name) {
-    super(name)
+    super(name);
   }
 
   speak() {
@@ -343,11 +343,11 @@ class Dog extends Animal {
   }
 }
 
-const dog = new Dog('hubert')
+const dog = new Dog('hubert');
 
-dog.name // 'hubert'. pas besoin d'exécuter un getter
-dog.name = 'Oo' //  'Oo!'. pas besoin d'exécuter un setter
-dog.speak() // 'woof'
+dog.name; // 'hubert'. pas besoin d'exécuter un getter
+dog.name = 'Oo'; //  'Oo!'. pas besoin d'exécuter un setter
+dog.speak(); // 'woof'
 ```
 
 
