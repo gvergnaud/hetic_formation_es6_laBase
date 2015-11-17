@@ -2,7 +2,7 @@
 
 ## Comment exécuter du code ES6 ?
 
-Toutes les features ES6 (ou ES2015) ne sont pas encore bien supportée à ce jour.
+Toutes les features ES6 (ou ES2015) ne sont pas encore bien supportées à ce jour.
 Il faut donc utiliser un compiler, comme Babel.
 
 ```
